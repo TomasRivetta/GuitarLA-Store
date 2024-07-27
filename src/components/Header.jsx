@@ -1,31 +1,12 @@
-//import { Fragment } from "react";
-import { useMemo } from "react";
-
 export default function Header({
   cart,
   removeFromCart,
   decreaseQuantity,
   increaseQuantity,
   clearCart,
+  isEmpty,
+  cartTotal,
 }) {
-  // Esto es JS
-  //const name = "Juan";
-
-  //   return (
-  //     <Fragment>
-  //       <p>Hola: {name}</p>
-  //       <p>despues</p>
-  //     </Fragment>
-  //   );
-
-  // State Derivado //UseMemo cada vez que cart cambie
-  const isEmpty = useMemo(() => cart.length === 0, [cart]);
-  //           un acumulado, cada item, el acumulado mas la cantidad multiplicada por el precio, y que el total inicialice en 0
-  const cartTotal = useMemo(
-    () => cart.reduce((total, item) => total + item.quantity * item.price, 0),
-    [cart]
-  );
-
   return (
     <header className="py-5 header">
       <div className="container-xl">
@@ -34,7 +15,7 @@ export default function Header({
             <a href="index.html">
               <img
                 className="img-fluid"
-                src="./public/img/logo.svg"
+                src="/img/logo.svg"
                 alt="imagen logo"
               />
             </a>
@@ -43,7 +24,7 @@ export default function Header({
             <div className="carrito">
               <img
                 className="img-fluid"
-                src="./public/img/carrito.png"
+                src="/img/carrito.png"
                 alt="imagen carrito"
               />
 
