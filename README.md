@@ -1,8 +1,8 @@
-# React + Vite
+# GuitarLA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el primer proyecto del curso de 'React y TypeScript - La Guía Completa Creando +10 Proyectos', dictado por el profesor: Juan Pablo De la torre Valdez
 
-Currently, two official plugins are available:
+## 🔨 Lenguajes y Herramientas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+
