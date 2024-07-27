@@ -1,11 +1,12 @@
-export default function Guitar({ guitar }) {
-  const { id, name, image, description, price } = guitar;
+export default function Guitar({ id, guitar,addToCart }) {
+  const { name, image, description, price } = guitar;
 
-  // TODO: COMENZAR CON EL CARRITO
+  //PRIMER FORMA DE MODIIFICAR EL STATE
+  // const handleClick = (guitar) => {
+  //   setCart([...cart, guitar]);
+  // };
 
-  const handleClick = (guitar) => {
-    console.log("Hola", guitar);
-  };
+  //AGREGAR GUITARRAS AL CARRITO
 
   return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center" id={`${id}`}>
@@ -24,7 +25,20 @@ export default function Guitar({ guitar }) {
         <button
           type="button"
           className="btn btn-dark w-100"
-          onClick={() => handleClick(guitar)}
+          //AGREGAR GUITARRA AL CARRITO
+
+          //PRIMER FORMA
+          //onClick={() => handleClick(guitar)}
+
+          //SEGUNDA FORMA
+          //            has una copia de cart y insertale guitar
+          //onClick={() => setCart([...cart, guitar])}
+
+          //TERCER FORMA
+          //onClick={() => setCart((prevCart) => [...prevCart, guitar])}
+
+          //FORMA CORRECTA PARA AÑADIR ELEMENTO AL CARRITO
+          onClick={() => addToCart(guitar)}
         >
           Agregar al Carrito
         </button>
